@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nope"
+    android:orientation="vertical"
+
+
+    tools:context=".mainTabs.fragments.CaloriesFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/calculate_your_dialy_calories"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/choose_your_gender"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/enter_your_weight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/edittextWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:hint="@string/enter_weight_here"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/spinnerWeight"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="@dimen/_40sdp"
+                    android:contentDescription="@string/choose_weight_parameter"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/enter_your_height"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:id="@+id/edittextHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:hint="@string/enter_height_here"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/black" />
+
+                <Spinner
+
+                    android:id="@+id/spinnerHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:contentDescription="@string/choose_height_parameter"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/enter_your_age_in_years"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+
+                />
+
+            <EditText
+                android:id="@+id/edittextAge"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="@string/enter_age_here"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/choose_your_exercise_intensity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+
+                />
+
+            <Spinner
+
+                android:id="@+id/spinnerExerciseIntensity"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:contentDescription="@string/choose_how_much_active_a_person_is"
+                android:textAlignment="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calaculateCaloriesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:text="@string/my_calories"
+                app:cornerRadius="@dimen/_10sdp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

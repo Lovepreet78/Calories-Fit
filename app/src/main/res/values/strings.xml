@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Calories Fit</string>
+    <string name="splash_intro">Be Fit With \nCalorie Fit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="calculate_your_dialy_calories">Calculate Your Dialy Calories</string>
+    <string name="choose_your_gender">Choose Your Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="enter_your_weight">Enter Your Weight</string>
+    <string name="enter_weight_here">Enter Weight Here</string>
+    <string name="choose_weight_parameter">choose weight parameter</string>
+    <string name="enter_your_height">Enter Your Height</string>
+    <string name="enter_height_here">Enter Height Here</string>
+    <string name="choose_height_parameter">choose height parameter</string>
+    <string name="enter_your_age_in_years">Enter Your Age (In Years)</string>
+    <string name="enter_age_here">Enter Age Here</string>
+    <string name="choose_your_exercise_intensity">Choose Your Exercise Intensity</string>
+    <string name="choose_how_much_active_a_person_is">Choose how much active a person is</string>
+    <string name="my_calories">My Calories</string>
+    <string name="calculate_your_bmi">Calculate Your BMI</string>
+    <string name="bmistage">bmiStage</string>
+    <string name="your_bmi">Your BMI</string>
+    <string name="my_bmi">My BMI</string>
+    <string name="your_average_calories_burning_daily">Your Average Calories Burning Daily</string>
+    <string name="calories">calories</string>
+    <string name="weight_gain">Weight Gain</string>
+    <string name="weight_loss">Weight Loss</string>
+    <string name="calories_gain_ot_loss">calories gain ot loss</string>
+    <string name="advice">advice</string>
+    <string name="low_bmi">You are having a very low BMI , you should gain Weight</string>
+    <string name="good_bmi">You are having a good  BMI , you are healthy , Keep going....</string>
+    <string name="high_bmi">You are having a high BMI , you should loss Weight</string>
+    <string name="very_high_bmi">You are having a very high BMI , It is very dangerous, you must loss weight or you may die soon</string>
+
+
+    <string-array name="spinner_items_weight">
+        <item>"Not selected"</item>
+        <item>"kgs"</item>
+        <item>"lbs"</item>
+    </string-array>
+
+
+    <string-array name="spinner_items_height">
+        <item>"Not selected"</item>
+        <item>"inches"</item>
+        <item>"meters"</item>
+    </string-array>
+
+
+    <string-array name="spinner_items_Exercise_intensity">
+        <item>"Not selected"</item>
+        <item>"No Activity"</item>
+        <item>"Light exercise 1-3 days"</item>
+        <item>"Moderate exercise 3-5 days"</item>
+        <item>"Moderate exercise 5-7 days"</item>
+        <item>"Daily High Intensity Exercise"</item>
+    </string-array>
+</resources>

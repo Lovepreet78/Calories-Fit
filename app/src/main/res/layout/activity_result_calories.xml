@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    android:orientation="vertical"
+    tools:context=".mainTabs.results.ResultCalories">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/your_average_calories_burning_daily"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/caloriesDisplayer"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:hint="@string/calories"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/myAdviceDisplayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:hint="@string/advice"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/weightGainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/weight_gain"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/weightLossButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/weight_loss"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/onButtonClickDisplayerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:elevation="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#D4DD79"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/cardviewTextViewResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/calories_gain_ot_loss"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
