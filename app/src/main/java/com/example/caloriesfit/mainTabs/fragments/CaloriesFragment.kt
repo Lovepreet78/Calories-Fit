@@ -47,7 +47,8 @@ class CaloriesFragment : Fragment() {
         val editTextHeight = view.findViewById<EditText>(R.id.edittextHeight)
         val editTextAge = view.findViewById<EditText>(R.id.edittextAge)
 
-        val calaculateCaloriesButton =
+
+        val calculateCaloriesButton =
             view.findViewById<MaterialButton>(R.id.calaculateCaloriesButton)
 
 
@@ -74,12 +75,13 @@ class CaloriesFragment : Fragment() {
         spinnerHeight.adapter = adapter2
         spinnerExerciseIntensity.adapter = adapter3
 
-        calaculateCaloriesButton.setOnClickListener {
+        calculateCaloriesButton.setOnClickListener {
 
 
             if (!radioButtonMale.isChecked && !radioButtonFemale.isChecked) {
                 Toast.makeText(context, "Choose Gender", Toast.LENGTH_SHORT).show()
-            } else if (editTextWeight.text.toString() == "" || editTextHeight.text.toString() == "" || editTextAge.text.toString() == ""
+            }
+            else if (editTextWeight.text.toString() == "" || editTextHeight.text.toString() == "" || editTextAge.text.toString() == ""
             ) {
                 Toast.makeText(context, "Please Enter all required parameters", Toast.LENGTH_SHORT)
                     .show()
@@ -93,7 +95,8 @@ class CaloriesFragment : Fragment() {
                     .toDouble() < 1.0 || editTextAge.text.toString().toDouble() < 1.0
             ) {
                 Toast.makeText(context, "Enter valid Values", Toast.LENGTH_SHORT).show()
-            } else {
+            }
+            else {
                 var weight = editTextWeight.text.toString().toDouble()
                 var height = editTextHeight.text.toString().toDouble()
                 val age = editTextAge.text.toString().toDouble()
@@ -147,7 +150,7 @@ class CaloriesFragment : Fragment() {
                         } else if (bmi >= 40) {
                             bmiCondition = "obese"
                         }
-
+                        Toast.makeText(requireContext(), "$calories", Toast.LENGTH_LONG).show()
                         val intentToResult = Intent(context, ResultCalories::class.java)
                         intentToResult.putExtra("Calories", calories)
 

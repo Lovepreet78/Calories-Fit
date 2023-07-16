@@ -8,28 +8,36 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.caloriesfit.R
 import com.google.android.material.button.MaterialButton
+import kotlin.properties.Delegates
 
 class ResultCalories : AppCompatActivity() {
-    private val caloriesDisplayer: TextView = findViewById(R.id.caloriesDisplayer)
-    private val myAdviceDisplayer1: TextView = findViewById(R.id.myAdviceDisplayer1)
-    private val onButtonClickDisplayer: TextView =
-        findViewById(R.id.cardviewTextViewResult)
-    private val onButtonClickDisplayerCardView: CardView =
-        findViewById(R.id.onButtonClickDisplayerCardView)
-    private val weightGainButton: MaterialButton =
-        findViewById(R.id.weightGainButton)
-    private val weightLossButton: MaterialButton =
-        findViewById(R.id.weightLossButton)
+    lateinit var  caloriesDisplayer:TextView
+    lateinit var  myAdviceDisplayer1: TextView
+    lateinit var onButtonClickDisplayer: TextView
+
+    lateinit var  onButtonClickDisplayerCardView: CardView
+
+    lateinit var weightGainButton: MaterialButton
+
+    lateinit var weightLossButton: MaterialButton
+
+    var calories:Int =0
 
 
-    private val calories = intent.getDoubleExtra("Calories", -1.0).toInt()
-    private val bmi = intent.getStringExtra("bmi")
-    private var advice = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_calories)
 
+        caloriesDisplayer = findViewById(R.id.caloriesDisplayer)
+        myAdviceDisplayer1 = findViewById(R.id.myAdviceDisplayer1)
+        onButtonClickDisplayer = findViewById(R.id.cardviewTextViewResult)
+        onButtonClickDisplayerCardView = findViewById(R.id.onButtonClickDisplayerCardView)
+        weightGainButton = findViewById(R.id.weightGainButton)
+        weightLossButton = findViewById(R.id.weightLossButton)
 
+        calories = intent.getDoubleExtra("Calories", -1.0).toInt()
+        val bmi = intent.getStringExtra("bmi")
+        var advice = ""
         caloriesDisplayer.text = calories.toString()
 
         when (bmi) {
